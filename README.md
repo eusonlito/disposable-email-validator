@@ -53,21 +53,29 @@ To integrate this library with your Laravel 5.x project add the following
 line to the `providers` key within your `config/app.php` file:
 
 ```php
-Eusonlito\DisposableEmail\Laravel\DisposableEmailServiceProvider::class
+'providers' => [
+    ...
+
+    Eusonlito\DisposableEmail\Laravel\DisposableEmailServiceProvider::class
+
+    ...
+];
 ```
 
 You can then use the library within your project like so:
 
 ```php
 <?php
-
+use InvalidArgumentException;
 use Eusonlito\DisposableEmail\Check;
 
-class MyClass
+class Signup
 {
-    public function foo()
+    public function validate(Request $request)
     {
-        Check::email('address@domain.com');
+        if (!Check::email($request->input('email'))) {
+            throw new InvalidArgumentException('Invalid email');
+        }
     }
 
     public function getValidator(array $data)
@@ -78,7 +86,3 @@ class MyClass
     }
 }
 ```
-
-
-EmailChecker is released under the MIT License.
-See the [bundled LICENSE file](LICENSE) for details.
