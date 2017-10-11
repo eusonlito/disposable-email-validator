@@ -102,6 +102,6 @@ class Check
      */
     private function require($name)
     {
-        return require dirname(__DIR__.'/data/'.$name.'.php');
+        return require dirname(__DIR__).'/data/'.$name.'.php';
     }
 }
