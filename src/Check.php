@@ -4,16 +4,6 @@ namespace Eusonlito\DisposableEmail;
 class Check
 {
     /**
-     * @var array
-     */
-    private static $domains = [];
-
-    /**
-     * @var array
-     */
-    private static $wildcards = [];
-
-    /**
      * @param string $email
      *
      * @return bool
@@ -54,9 +44,15 @@ class Check
      */
     public static function domain($domain)
     {
-        if (in_array($domain, static::domains())) {
-            return false;
+        $fp = fopen(static::data('domains'), 'r');
+
+        while (($row = fgets($fp, 1024)) !== false) {
+            if ($domain === trim($row)) {
+                return false;
+            }
         }
+
+        fclose($fp);
 
         return static::wildcard($domain);
     }
@@ -68,40 +64,27 @@ class Check
      */
     public static function wildcard($domain)
     {
-        return !in_array(implode('.', array_slice(explode('.', $domain), -2)), static::wildcards());
-    }
+        $domain = implode('.', array_slice(explode('.', $domain), -2));
+        $fp = fopen(static::data('wildcards'), 'r');
 
-    /**
-     * @return array
-     */
-    private static function domains()
-    {
-        if (empty(static::$domains)) {
-            static::$domains = static::load('domains');
+        while (($row = fgets($fp, 1024)) !== false) {
+            if ($domain === trim($row)) {
+                return false;
+            }
         }
 
-        return static::$domains;
-    }
+        fclose($fp);
 
-    /**
-     * @return array
-     */
-    private static function wildcards()
-    {
-        if (empty(static::$wildcards)) {
-            static::$wildcards = static::load('wildcards');
-        }
-
-        return static::$wildcards;
+        return true;
     }
 
     /**
      * @param string $name
      *
-     * @return array
+     * @return string
      */
-    private static function load($name)
+    private static function data($name)
     {
-        return require dirname(__DIR__).'/data/'.$name.'.php';
+        return dirname(__DIR__).'/data/'.$name.'.txt';
     }
 }

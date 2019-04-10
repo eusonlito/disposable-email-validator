@@ -76,6 +76,6 @@ class Generator
 
         sort($list);
 
-        file_put_contents(ROOT.'/data/'.$name.'.php', '<?php return '.var_export($list, true).';', LOCK_EX);
+        file_put_contents(ROOT.'/data/'.$name.'.txt', implode("\n", $list), LOCK_EX);
     }
 }
