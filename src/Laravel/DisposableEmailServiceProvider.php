@@ -3,7 +3,7 @@ namespace Eusonlito\DisposableEmail\Laravel;
 
 use Eusonlito\DisposableEmail\Check;
 use Illuminate\Support\ServiceProvider;
-use Validator;
+use Illuminate\Support\Facades\Validator;
 
 class DisposableEmailServiceProvider extends ServiceProvider
 {
