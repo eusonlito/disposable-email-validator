@@ -16,7 +16,7 @@ class DisposableEmailServiceProvider extends ServiceProvider
          * Added a custom validator filter.
          */
         $check = function ($attr, $value) {
-            return Check::domain(explode('@', $value)[1]);
+            return filter_var($value, FILTER_VALIDATE_EMAIL) && Check::domain(explode('@', $value, 2)[1]);
         };
 
         Validator::extend('disposable_email', $check, 'The :attribute domain is not allowed.');
