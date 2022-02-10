@@ -13,17 +13,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FGRibreau/mailchecker.git",
-                "reference": "d0ac12844391e36988b777182b2b343cdd9f81fc"
+                "reference": "f695bddaddc880421350836d0151173b4808cddb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FGRibreau/mailchecker/zipball/d0ac12844391e36988b777182b2b343cdd9f81fc",
-                "reference": "d0ac12844391e36988b777182b2b343cdd9f81fc",
+                "url": "https://api.github.com/repos/FGRibreau/mailchecker/zipball/f695bddaddc880421350836d0151173b4808cddb",
+                "reference": "f695bddaddc880421350836d0151173b4808cddb",
                 "shasum": ""
             },
-            "require-dev": {
-                "phpunit/phpunit": "^7.0"
+            "require": {
+                "php": ">=7.3"
             },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "classmap": [
@@ -37,10 +41,21 @@
             "description": "Temporary (disposable/throwaway) email detection library. Covers 1987 fake email providers.",
             "keywords": [
                 "detection",
+                "disposable",
                 "email",
                 "fake"
             ],
-            "time": "2019-11-20T08:37:41+00:00"
+            "support": {
+                "issues": "https://github.com/FGRibreau/mailchecker/issues",
+                "source": "https://github.com/FGRibreau/mailchecker/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fgribreau",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-01T09:18:37+00:00"
         },
         {
             "name": "ivolo/disposable-email-domains",
@@ -48,8 +63,9 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ivolo/disposable-email-domains.git",
-                "reference": "cd45f5ac86166d81b21e5575cc45cbbe02636efb"
+                "reference": "96e3a326f2f4ff33542db4bfa51d70ab0ff3e4b1"
             },
+            "default-branch": true,
             "type": "library",
             "license": [
                 "MIT"
@@ -66,7 +82,7 @@
                 "disposable",
                 "domains"
             ],
-            "time": "2019-11-20T04:47:59+00:00"
+            "time": "2022-01-28T23:37:34+00:00"
         },
         {
             "name": "martenson/disposable-email-domains",
@@ -84,27 +100,29 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MattKetmo/EmailChecker.git",
-                "reference": "e325d2b54403100054676de3f399d26bf3362501"
+                "reference": "4c2ecb975ddfdcc2bc0d428b3015ec88c8cd47c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MattKetmo/EmailChecker/zipball/e325d2b54403100054676de3f399d26bf3362501",
-                "reference": "e325d2b54403100054676de3f399d26bf3362501",
+                "url": "https://api.github.com/repos/MattKetmo/EmailChecker/zipball/4c2ecb975ddfdcc2bc0d428b3015ec88c8cd47c5",
+                "reference": "4c2ecb975ddfdcc2bc0d428b3015ec88c8cd47c5",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.4 || ^7.0"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^1.9",
-                "knplabs/gaufrette": ">=0.1,<=0.8",
-                "phpunit/phpunit": "^4.8",
-                "symfony/validator": "^2.1 || ^3.0 || ^4.0"
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "illuminate/support": "^5.0 || ^6.0 || ^7.0 || ^8.0",
+                "knplabs/gaufrette": "^0.10",
+                "phpunit/phpunit": "^7.5 || ^9.5",
+                "symfony/validator": "^3.0 || ^4.0 || ^5.0"
             },
             "suggest": {
                 "knplabs/gaufrette": "Use filesystem abstraction layer to read data",
                 "symfony/validator": "Add validation constraints"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -138,7 +156,11 @@
                 "email",
                 "throwaway"
             ],
-            "time": "2019-06-04T07:35:43+00:00"
+            "support": {
+                "issues": "https://github.com/MattKetmo/EmailChecker/issues",
+                "source": "https://github.com/MattKetmo/EmailChecker/tree/master"
+            },
+            "time": "2022-02-08T16:24:56+00:00"
         }
     ],
     "aliases": [],
@@ -153,5 +175,6 @@
     "platform": {
         "php": ">=5.4"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }
