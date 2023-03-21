@@ -7,7 +7,9 @@ class Generator
      * @var array
      */
     private static $sources = [
-        'IvoloDisposableEmailDomains', 'MattketmoEmailChecker', 'FgribreauMailchecker', 'MartensonDisposableEmailDomains'
+        'Fakerfilter', 'IvoloDisposableEmailDomains',
+        'MattketmoEmailChecker', 'FgribreauMailchecker',
+        'MartensonDisposableEmailDomains'
     ];
 
     /**

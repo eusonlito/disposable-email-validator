@@ -42,6 +42,19 @@ abstract class SourceInterface
      *
      * @return array
      */
+    protected static function remote($url)
+    {
+        return array_filter(
+            file($url, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES),
+            static function ($line) { return preg_match('/^[a-z0-9]/', $line); }
+        );
+    }
+
+    /**
+     * @param string $file
+     *
+     * @return array
+     */
     protected static function json($file)
     {
         return json_decode(static::contents($file));
