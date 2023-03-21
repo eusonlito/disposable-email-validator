@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FGRibreau/mailchecker.git",
-                "reference": "f695bddaddc880421350836d0151173b4808cddb"
+                "reference": "b70a6995907c87acf8dc5fa1e8b6cbaddd80cfcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FGRibreau/mailchecker/zipball/f695bddaddc880421350836d0151173b4808cddb",
-                "reference": "f695bddaddc880421350836d0151173b4808cddb",
+                "url": "https://api.github.com/repos/FGRibreau/mailchecker/zipball/b70a6995907c87acf8dc5fa1e8b6cbaddd80cfcd",
+                "reference": "b70a6995907c87acf8dc5fa1e8b6cbaddd80cfcd",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-01T09:18:37+00:00"
+            "time": "2023-01-24T21:54:47+00:00"
         },
         {
             "name": "ivolo/disposable-email-domains",
@@ -63,7 +63,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ivolo/disposable-email-domains.git",
-                "reference": "96e3a326f2f4ff33542db4bfa51d70ab0ff3e4b1"
+                "reference": "2f1ae6c93c5243ab93cbd8f1308ad16aa3b3e84f"
             },
             "default-branch": true,
             "type": "library",
@@ -82,7 +82,7 @@
                 "disposable",
                 "domains"
             ],
-            "time": "2022-01-28T23:37:34+00:00"
+            "time": "2022-09-28T13:13:19+00:00"
         },
         {
             "name": "martenson/disposable-email-domains",
@@ -100,12 +100,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MattKetmo/EmailChecker.git",
-                "reference": "4c2ecb975ddfdcc2bc0d428b3015ec88c8cd47c5"
+                "reference": "8ca0fdeb0830338b5da6c53d160974b3c3b410b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MattKetmo/EmailChecker/zipball/4c2ecb975ddfdcc2bc0d428b3015ec88c8cd47c5",
-                "reference": "4c2ecb975ddfdcc2bc0d428b3015ec88c8cd47c5",
+                "url": "https://api.github.com/repos/MattKetmo/EmailChecker/zipball/8ca0fdeb0830338b5da6c53d160974b3c3b410b4",
+                "reference": "8ca0fdeb0830338b5da6c53d160974b3c3b410b4",
                 "shasum": ""
             },
             "require": {
@@ -160,7 +160,7 @@
                 "issues": "https://github.com/MattKetmo/EmailChecker/issues",
                 "source": "https://github.com/MattKetmo/EmailChecker/tree/master"
             },
-            "time": "2022-02-08T16:24:56+00:00"
+            "time": "2023-02-15T15:07:06+00:00"
         }
     ],
     "aliases": [],
@@ -176,5 +176,5 @@
         "php": ">=5.4"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
